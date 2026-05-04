@@ -9,3 +9,8 @@ public:
 mahasiswa::Mahasiswa() {
     cout << "Constructor terpanggil" << endl;
 };
+
+int main() {
+    mahasiswa mhs;
+    return 0;
+}
