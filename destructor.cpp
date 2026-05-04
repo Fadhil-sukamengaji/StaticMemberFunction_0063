@@ -1,14 +1,29 @@
 #include <iostream>
 using namespace std;
 
-class angka {
+class angka
+{
 private:
     int *arr;
     int panjang;
+
 public:
-    angka(int);
-    ~angka();
+    angka(int); // Constructor
+    ~angka();   // Destructor
     void cetakData();
     void isiData();
 };
+
+angka::angka(int i){ // Constructor
+    panjang = i;
+    arr = new int[i];
+    isiData();
+}
+
+angka::~angka(){ // Destructor
+    cout << endl;
+    cetakData();
+    delete[] arr;
+    cout << "Alamat Array Sudah Dilepaskan" << endl;
+}
 
